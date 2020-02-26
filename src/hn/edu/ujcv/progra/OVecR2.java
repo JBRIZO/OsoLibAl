@@ -2,9 +2,18 @@ package hn.edu.ujcv.progra;
 
 public class OVecR2 {
     // miembros
+    private double x;
+    private double y;
 
 
     // accesoras y mutadoras
+    public double getX(){
+        return x;
+    }
+    public void setX(double x){
+        this.x = x;
+    }
+
 
     // metodos
     public OVecR2 suma(OVecR2 b){
