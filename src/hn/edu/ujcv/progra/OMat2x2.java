@@ -2,14 +2,15 @@ package hn.edu.ujcv.progra;
 
 public class OMat2x2 {
 
-    // miembros
-
+    // miembros  double m11,m12;
+    //           double m21,m22;
 
 
     // accesoras y mutadoras
-
-    //getFilaX
+    //getColX
     //getColY
+    //getFilaX
+    //getFilaY
 
     // metodos
 
@@ -34,6 +35,13 @@ public class OMat2x2 {
 
     public OMat2x2 mult(OVecR2 b){
         //TODO: implementar
+        //    m11  m12
+        //    m21  m22
+        //
+        //
+        //  m11   =  a.m11 * b.m11 + a.m12 * b.m21
+        //  m12   =  a.m11 * b.m12 + a.m12 * b.m22
+        //
         return new OMat2x2();
     }
 
@@ -44,11 +52,22 @@ public class OMat2x2 {
 
     // Metodos de la clase.
     public static OMat2x2 rot(double alpha){
-        //TODO: implementar
-        return new OMat2x2();
+        // cos a   -sin a
+        // sin a   cos a
+
+        double  m11,m12,
+                m21,m22;
+
+        m11 = Math.cos(alpha);
+        m12 = -Math.sin(alpha);
+        m21 = Math.sin(alpha);
+        m22 = Math.cos(alpha);
+        return new OMat2x2(m11,m12,m21,m22);
     }
 
     public static OMat2x2 identidad(){
+
+
         //TODO: implementar
         return new OMat2x2();
     }
@@ -63,6 +82,5 @@ public class OMat2x2 {
                    double m21, double m22){}
 
     public OMat2x2(OVecR2 a, OVecR2 b, boolean esColumna){}
-
 
 }
