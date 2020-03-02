@@ -5,7 +5,6 @@ public class OVecR2 {
     private double x;
     private double y;
 
-
     // accesoras y mutadoras
     public double getX(){
         return x;
@@ -16,7 +15,8 @@ public class OVecR2 {
     public double getY(){
         return y;
     }
-    public void setY(double y){
+    public void setY(double y)
+    {
         this.y = y;
     }
 
@@ -24,6 +24,8 @@ public class OVecR2 {
     // metodos
     public OVecR2 suma(OVecR2 b){
         //TODO: implementar
+
+
         return new OVecR2();
     }
 

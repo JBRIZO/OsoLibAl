@@ -5,7 +5,9 @@ public class OMat2x2 {
     // miembros
 
 
+
     // accesoras y mutadoras
+
     //getFilaX
     //getColY
 
