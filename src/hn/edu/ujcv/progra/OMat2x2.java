@@ -23,17 +23,17 @@ public class OMat2x2 {
         //TODO: implementar
         return new OMat2x2();
     }
-    public OMat2x2 suma(OVecR2 b){
+    public OMat2x2 suma(OMat2x2 b){
         //TODO: implementar
         return new OMat2x2();
     }
 
-    public OMat2x2 resta(OVecR2 b){
+    public OMat2x2 resta(OMat2x2 b){
         //TODO: implementar
         return new OMat2x2();
     }
 
-    public OMat2x2 mult(OVecR2 b){
+    public OMat2x2 mult(OMat2x2 b){
         //TODO: implementar
         //    m11  m12
         //    m21  m22
