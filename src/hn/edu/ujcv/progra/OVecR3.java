@@ -3,11 +3,51 @@ package hn.edu.ujcv.progra;
 public class OVecR3 {
 
     // miembros
+    private double x;
+    private double y;
+    private double z;
+    // constructores
+    public OVecR3(){}
+
+    public OVecR3(OVecR3 a){}
+
+    public OVecR3(double x, double y)
+    {
+        this.x = x;
+        this.y = y;
+    }
 
 
     // accesoras y mutadoras
+    public double getX()
+    {
+        return x;
+    }
+    public void setX(double x)
+    {
+        this.x = x;
+    }
+    public double getY()
+    {
+        return y;
+    }
+    public void setY(double y)
+    {
+        this.y = y;
+    }
+
+    public double getZ()
+    {
+        return z;
+    }
+
+    public void setZ(double z)
+    {
+        this.z = z;
+    }
+    //metodos
     public OVecR3 suma(OVecR3 b){
-        //TODO: implementar
+
         return new OVecR3();
     }
 
@@ -38,5 +78,5 @@ public class OVecR3 {
 
     // metodos
 
-    // constructores
+
 }

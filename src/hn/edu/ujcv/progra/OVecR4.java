@@ -2,6 +2,10 @@ package hn.edu.ujcv.progra;
 
 public class OVecR4 {
     // miembros
+    private double x1;
+    private double x2;
+    private double x3;
+    private double x4;
 
 
     // accesoras y mutadoras
