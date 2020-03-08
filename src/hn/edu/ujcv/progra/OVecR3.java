@@ -11,12 +11,12 @@ public class OVecR3 {
 
     public OVecR3(OVecR3 a){}
 
-    public OVecR3(double x, double y)
+    public OVecR3(double x, double y,double z)
     {
         this.x = x;
         this.y = y;
+        this.z = z;
     }
-
 
     // accesoras y mutadoras
     public double getX()
@@ -48,12 +48,11 @@ public class OVecR3 {
     //metodos
     public OVecR3 suma(OVecR3 b){
 
-        return new OVecR3();
+        return new OVecR3(this.x + b.x, this.y + b.y, this.z + b.z);
     }
 
     public OVecR3 resta(OVecR3 b){
-        //TODO: implementar
-        return new OVecR3();
+        return new OVecR3(this.x - b.x, this.y - b.y, this.z - b.z);
     }
 
     public OVecR3 prodCruz(OVecR3 b){
