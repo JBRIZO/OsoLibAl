@@ -49,11 +49,11 @@ public class OVecR2 {
 
     public double prodPunto(OVecR2 b){
         double respuesta;
-        respuesta = (x * b.x) + (y * b.y);
+        respuesta = (this.x * b.x) + (this.y * b.y);
         return respuesta;
     }
 
-    public double magnitud(OVecR2 a){
+    public double magnitud(){
         x = Math.sqrt( Math.pow(this.x,2) + Math.pow(this.y,2));
         return x;
     }

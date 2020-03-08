@@ -110,7 +110,7 @@ public class OMat2x2 {
     }
 
     // Metodos de la clase.
-    public static OMat2x2 rot(double alpha){
+    public static OMat2x2 rotacion(double alpha){
         // cos a   -sin a
         // sin a   cos a
         double  r11,r12,
