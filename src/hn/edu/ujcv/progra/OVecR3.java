@@ -6,6 +6,8 @@ public class OVecR3 {
     private double x;
     private double y;
     private double z;
+
+
     // constructores
     public OVecR3(){}
 
@@ -17,6 +19,7 @@ public class OVecR3 {
         this.y = y;
         this.z = z;
     }
+
 
     // accesoras y mutadoras
     public double getX()
@@ -45,6 +48,8 @@ public class OVecR3 {
     {
         this.z = z;
     }
+
+
     //metodos
     public OVecR3 suma(OVecR3 b){
 
@@ -55,14 +60,13 @@ public class OVecR3 {
         return new OVecR3(this.x - b.x, this.y - b.y, this.z - b.z);
     }
 
-    public OVecR3 prodCruz(OVecR3 b){
-        //
-        //  x  y  z
-        //  x1 y1 z1       i = y * z1 - z * y1;
-        //                 j = - ();
-        //                 k = ;
-        //
-        return new OVecR3();
+    public OVecR3 prodCruz(OVecR3 b)
+    {
+        double i, j, k;
+        i = (this.y * b.z) - (this.z * b.y);
+        j = -((this.x * b.z) - (this.z * b.x));
+        k =  (this.x * b.y) - (this.y * b.x);
+        return new OVecR3(i,j,k);
     }
 
     public double prodPunto(OVecR3 b){
@@ -75,7 +79,10 @@ public class OVecR3 {
         return 0.0f;
     }
 
-    // metodos
+    @Override
+    public String toString(){
+        return "i: " + getX() + " j: " + getY() + " k: " + getZ();
+    }
 
 
 }
