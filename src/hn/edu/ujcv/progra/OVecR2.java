@@ -59,7 +59,7 @@ public class OVecR2 {
     public double magnitud()
     {
         double respuesta;
-        respuesta = Math.sqrt( Math.pow(this.x,2) + Math.pow(this.y,2));
+        respuesta = Math.sqrt(Math.pow(this.x,2) + Math.pow(this.y,2));
         return respuesta;
     }
     @Override

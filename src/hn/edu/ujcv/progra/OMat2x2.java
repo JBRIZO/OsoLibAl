@@ -67,9 +67,9 @@ public class OMat2x2 {
                            this.m12,this.m11);
     }
 
-    public OMat2x2 inversa(){
+    public OMat2x2 inversa()
+    {
 
-        this.determinante();
         return new OMat2x2((1/this.determinante()) * this.m22,(1/this.determinante()) * -this.m12,
                            (1/this.determinante()) * -this.m21,(1/this.determinante()) * this.m11);
     }
@@ -115,8 +115,6 @@ public class OMat2x2 {
 
     // Metodos de la clase.
     public static OMat2x2 rotacion(double alpha){
-        // cos a   -sin a
-        // sin a   cos a
         double  r11,r12,
                 r21,r22;
         r11 = Math.cos(alpha);
@@ -131,18 +129,11 @@ public class OMat2x2 {
     {
         return new OMat2x2(1,0,0,1);
     }
-    public String impresionMatriz()
-    {
-        String a = " ";
-        System.out.println("[ " + getM11() + "      " + getM12() + " ]");
-        System.out.println("[ " + getM21() + "      " + getM22() + " ]");
-        return a;
-    }
 
     @Override
     public String toString()
     {
-        return impresionMatriz();
+        return "[ " + getM11() + "      " + getM12() + " ]\n[ " + getM21() + "      " + getM22() + " ]";
     }
 
 

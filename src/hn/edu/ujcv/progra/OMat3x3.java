@@ -110,8 +110,9 @@ public class OMat3x3
     // metodos
 
     public OMat3x3 transpuesta(){
-        //TODO: implementar
-        return new OMat3x3();
+        return new OMat3x3(this.m11,this.m21,this.m31,
+                           this.m12,this.m22,this.m32,
+                           this.m13,this.m23,this.m33);
     }
 
     public OMat3x3 inversa(){
@@ -171,6 +172,11 @@ public class OMat3x3
         return new OMat3x3();
     }
 
+    @Override
+    public String toString()
+    {
+        return "[ "+getM11()+"      "+getM12()+"     "+getM13()+" ]\n[ "+getM21()+"      "+getM22()+"     "+getM23()+ " ]\n[ "+getM31()+"      "+getM32()+"     "+getM32()+" ]";
+    }
 
 
 
