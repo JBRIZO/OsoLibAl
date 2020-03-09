@@ -47,15 +47,19 @@ public class OVecR2 {
         return new OVecR2(this.x - b.x, this.y - b.y);
     }
 
-    public double prodPunto(OVecR2 b){
+    public double prodPunto(OVecR2 b)
+    {
         double respuesta;
         respuesta = (this.x * b.x) + (this.y * b.y);
         return respuesta;
     }
 
-    public double magnitud(){
-        x = Math.sqrt( Math.pow(this.x,2) + Math.pow(this.y,2));
-        return x;
+
+    public double magnitud()
+    {
+        double respuesta;
+        respuesta = Math.sqrt( Math.pow(this.x,2) + Math.pow(this.y,2));
+        return respuesta;
     }
     @Override
     public String toString(){

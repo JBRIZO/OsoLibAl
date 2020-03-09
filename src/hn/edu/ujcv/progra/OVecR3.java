@@ -1,4 +1,5 @@
 package hn.edu.ujcv.progra;
+import java.lang.Math.*;
 
 public class OVecR3 {
 
@@ -51,12 +52,14 @@ public class OVecR3 {
 
 
     //metodos
-    public OVecR3 suma(OVecR3 b){
+    public OVecR3 suma(OVecR3 b)
+    {
 
         return new OVecR3(this.x + b.x, this.y + b.y, this.z + b.z);
     }
 
-    public OVecR3 resta(OVecR3 b){
+    public OVecR3 resta(OVecR3 b)
+    {
         return new OVecR3(this.x - b.x, this.y - b.y, this.z - b.z);
     }
 
@@ -70,13 +73,16 @@ public class OVecR3 {
     }
 
     public double prodPunto(OVecR3 b){
-        //TODO: implementar
-        return 0.0f;
+        double respuesta;
+        respuesta = (this.x * b.x) + (this.y * b.y) + (this.z * b.z);
+        return respuesta;
     }
 
-    public double magnitud(){
-        //TODO: implementar
-        return 0.0f;
+    public double magnitud()
+    {
+        double respuesta;
+        respuesta = Math.sqrt( Math.pow(this.x,2) + Math.pow(this.y,2) + Math.pow(this.z,2));
+        return respuesta;
     }
 
     @Override
