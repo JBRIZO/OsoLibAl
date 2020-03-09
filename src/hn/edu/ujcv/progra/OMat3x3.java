@@ -129,21 +129,23 @@ public class OMat3x3
         return new OMat3x3();
     }
 
-    public OMat3x3 mult(OMat3x3 b){
-        //TODO: implementar
-        //    m11  m12
-        //    m21  m22
-        //
-        //
-        //  m11   =  a.m11 * b.m11 + a.m12 * b.m21
-        //  m12   =  a.m11 * b.m12 + a.m12 * b.m22
+    public OMat3x3 mult(OMat3x3 b)
+    {
+        double r11, r12, r13;
+        double r21, r22, r23;
+        double r31, r32, r33;
+        r11   =  (this.m11 * b.m11) + (this.m12 * b.m21);
+        r12   =  (this.m11 * b.m12) + (this.m12 * b.m22);
         //
         return new OMat3x3();
     }
 
-    public double determinante(){
-        //TODO: implementar
-        return 0.0f;
+    public double determinante()
+    {
+        double respuesta;
+        respuesta = (this.m11*this.m22*this.m33) + (this.m12*this.m23*this.m31) + (this.m13*this.m21*this.m32) - (this.m31*this.m22*this.m13) - (this.m32*this.m23*this.m11) - (this.m33*this.m21*this.m12);
+
+        return respuesta;
     }
 
     // Metodos de la clase.
