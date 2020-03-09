@@ -26,6 +26,7 @@ public class OVecR2 {
     {
         this.x = x;
     }
+
     public double getY()
     {
         return y;

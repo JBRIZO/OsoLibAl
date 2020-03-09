@@ -31,6 +31,7 @@ public class OVecR3 {
     {
         this.x = x;
     }
+
     public double getY()
     {
         return y;
@@ -44,7 +45,6 @@ public class OVecR3 {
     {
         return z;
     }
-
     public void setZ(double z)
     {
         this.z = z;

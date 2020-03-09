@@ -31,6 +31,7 @@ public class OMat2x2 {
     {
         this.m11 = m11;
     }
+
     public double getM12()
     {
         return m12;
@@ -39,6 +40,7 @@ public class OMat2x2 {
     {
         this.m12 = m12;
     }
+
     public double getM21()
     {
         return m21;
@@ -47,6 +49,7 @@ public class OMat2x2 {
     {
         this.m21 = m21;
     }
+
     public double getM22()
     {
         return m22;
@@ -55,6 +58,7 @@ public class OMat2x2 {
     {
         this.m22 = m22;
     }
+
     // metodos
 
     public OMat2x2 transpuesta()
