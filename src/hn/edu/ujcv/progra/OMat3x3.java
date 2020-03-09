@@ -119,14 +119,41 @@ public class OMat3x3
         //TODO: implementar
         return new OMat3x3();
     }
-    public OMat3x3 suma(OMat3x3 b){
-        //TODO: implementar
-        return new OMat3x3();
+    public OMat3x3 suma(OMat3x3 b)
+    {
+        double r11, r12, r13;
+        double r21, r22, r23;
+        double r31, r32, r33;
+        r11 = this.m11 + b.m11;
+        r12 = this.m12 + b.m12;
+        r13 = this.m13 + b.m13;
+        r21 = this.m21 + b.m21;
+        r22 = this.m22 + b.m22;
+        r23 = this.m23 + b.m23;
+        r31 = this.m31 + b.m31;
+        r32 = this.m32 + b.m32;
+        r33 = this.m33 + b.m33;
+        return new OMat3x3(r11, r12, r13,
+                           r21, r22, r23,
+                           r31, r32, r33);
     }
 
     public OMat3x3 resta(OMat3x3 b){
-        //TODO: implementar
-        return new OMat3x3();
+        double r11, r12, r13;
+        double r21, r22, r23;
+        double r31, r32, r33;
+        r11 = this.m11 - b.m11;
+        r12 = this.m12 - b.m12;
+        r13 = this.m13 - b.m13;
+        r21 = this.m21 - b.m21;
+        r22 = this.m22 - b.m22;
+        r23 = this.m23 - b.m23;
+        r31 = this.m31 - b.m31;
+        r32 = this.m32 - b.m32;
+        r33 = this.m33 - b.m33;
+        return new OMat3x3(r11, r12, r13,
+                           r21, r22, r23,
+                           r31, r32, r33);
     }
 
     public OMat3x3 mult(OMat3x3 b)
