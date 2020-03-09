@@ -63,6 +63,11 @@ public class OMat4x4 {
         return new OMat4x4();
     }
 
+    public static OMat4x4 rotW(double alpha){
+
+        return new OMat4x4();
+    }
+
     public static OMat4x4 identidad(){
 
 
