@@ -5,8 +5,8 @@ public class Main {
 
     public static void main(String[] args)
     {
-       OMat3x3 a = new OMat3x3(1,-1,2,-2,0,4,0,-2,7);
-       OMat3x3 b = new OMat3x3(5,4,-3,0,-6,10,-2,8,11);
-        System.out.println();
+       OVecR4 a = new OVecR4(1,2,3,4);
+       OVecR4 b = new OVecR4(1,1,1,1);
+        System.out.println(a.magnitud());
     }
 }
