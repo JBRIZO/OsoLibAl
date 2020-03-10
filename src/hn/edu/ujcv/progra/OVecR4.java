@@ -77,4 +77,9 @@ public class OVecR4 {
         respuesta = Math.sqrt( Math.pow(this.x,2) + Math.pow(this.y,2) + Math.pow(this.z,2) + Math.pow(this.t,2));
         return respuesta;
     }
+
+    @Override
+    public String toString(){
+        return "i: " + getX() + " j: " + getY() + " k: " + getZ() + " t: " + getT();
+    }
 }
