@@ -152,26 +152,87 @@ public class OMat4x4 {
         //TODO: implementar
         return new OMat4x4();
     }
-    public OMat4x4 suma(OMat4x4 b){
-        //TODO: implementar
-        return new OMat4x4();
+    public OMat4x4 suma(OMat4x4 b)
+    {
+        double r11, r12, r13, r14;
+        double r21, r22, r23, r24;
+        double r31, r32, r33, r34;
+        double r41, r42, r43, r44;
+        r11 = this.m11 + b.m11;
+        r12 = this.m12 + b.m12;
+        r13 = this.m13 + b.m13;
+        r14 = this.m14 + b.m14;
+        r21 = this.m21 + b.m21;
+        r22 = this.m22 + b.m22;
+        r23 = this.m23 + b.m23;
+        r24 = this.m24 + b.m24;
+        r31 = this.m31 + b.m31;
+        r32 = this.m32 + b.m32;
+        r33 = this.m33 + b.m33;
+        r34 = this.m34 + b.m34;
+        r41 = this.m41 + b.m41;
+        r42 = this.m42 + b.m42;
+        r43 = this.m43 + b.m43;
+        r44 = this.m44 + b.m44;
+        return new OMat4x4(r11,r12,r13,r14,
+                           r21,r22,r23,r24,
+                           r31,r32,r33,r34,
+                           r41,r42,r43,r44);
     }
 
-    public OMat4x4 resta(OMat4x4 b){
-        //TODO: implementar
-        return new OMat4x4();
+    public OMat4x4 resta(OMat4x4 b)
+    {
+        double r11, r12, r13, r14;
+        double r21, r22, r23, r24;
+        double r31, r32, r33, r34;
+        double r41, r42, r43, r44;
+        r11 = this.m11 - b.m11;
+        r12 = this.m12 - b.m12;
+        r13 = this.m13 - b.m13;
+        r14 = this.m14 - b.m14;
+        r21 = this.m21 - b.m21;
+        r22 = this.m22 - b.m22;
+        r23 = this.m23 - b.m23;
+        r24 = this.m24 - b.m24;
+        r31 = this.m31 - b.m31;
+        r32 = this.m32 - b.m32;
+        r33 = this.m33 - b.m33;
+        r34 = this.m34 - b.m34;
+        r41 = this.m41 - b.m41;
+        r42 = this.m42 - b.m42;
+        r43 = this.m43 - b.m43;
+        r44 = this.m44 - b.m44;
+        return new OMat4x4(r11,r12,r13,r14,
+                           r21,r22,r23,r24,
+                           r31,r32,r33,r34,
+                           r41,r42,r43,r44);
     }
 
     public OMat4x4 mult(OMat4x4 b){
-        //TODO: implementar
-        //    m11  m12
-        //    m21  m22
-        //
-        //
-        //  m11   =  a.m11 * b.m11 + a.m12 * b.m21
-        //  m12   =  a.m11 * b.m12 + a.m12 * b.m22
-        //
-        return new OMat4x4();
+        double r11, r12, r13, r14;
+        double r21, r22, r23, r24;
+        double r31, r32, r33, r34;
+        double r41, r42, r43, r44;
+        r11   =  (this.m11 * b.m11) + (this.m12 * b.m21) + (this.m13 * b.m31) + (this.m14 * b.m41);
+        r12   =  (this.m11 * b.m12) + (this.m12 * b.m22) + (this.m13 * b.m32) + (this.m14 * b.m42);
+        r13   =  (this.m11 * b.m13) + (this.m12 * b.m23) + (this.m13 * b.m33) + (this.m14 * b.m43);
+        r14   =  (this.m11 * b.m14) + (this.m12 * b.m24) + (this.m13 * b.m34) + (this.m14 * b.m44);
+        r21   =  (this.m21 * b.m11) + (this.m22 * b.m21) + (this.m23 * b.m31) + (this.m24 * b.m41);
+        r22   =  (this.m21 * b.m12) + (this.m22 * b.m22) + (this.m23 * b.m32) + (this.m24 * b.m42);
+        r23   =  (this.m21 * b.m13) + (this.m22 * b.m23) + (this.m23 * b.m33) + (this.m24 * b.m43);
+        r24   =  (this.m21 * b.m14) + (this.m22 * b.m24) + (this.m23 * b.m34) + (this.m24 * b.m44);
+        r31   =  (this.m31 * b.m11) + (this.m32 * b.m21) + (this.m33 * b.m31) + (this.m34 * b.m41);
+        r32   =  (this.m31 * b.m12) + (this.m32 * b.m22) + (this.m33 * b.m32) + (this.m34 * b.m42);
+        r33   =  (this.m31 * b.m13) + (this.m32 * b.m23) + (this.m33 * b.m33) + (this.m34 * b.m43);
+        r34   =  (this.m31 * b.m14) + (this.m32 * b.m24) + (this.m33 * b.m34) + (this.m34 * b.m44);
+        r41   =  (this.m41 * b.m11) + (this.m42 * b.m21) + (this.m43 * b.m31) + (this.m44 * b.m41);
+        r42   =  (this.m41 * b.m12) + (this.m42 * b.m22) + (this.m43 * b.m32) + (this.m44 * b.m42);
+        r43   =  (this.m41 * b.m13) + (this.m42 * b.m23) + (this.m43 * b.m33) + (this.m44 * b.m43);
+        r44   =  (this.m41 * b.m14) + (this.m42 * b.m24) + (this.m43 * b.m34) + (this.m44 * b.m44);
+        return new OMat4x4(r11,r12,r13,r14,
+                           r21,r22,r23,r24,
+                           r31,r32,r33,r34,
+                           r41,r42,r43,r44);
     }
 
     public double determinante(){
@@ -210,5 +271,9 @@ public class OMat4x4 {
         return new OMat4x4();
     }
 
-    // constructores
+    @Override
+    public String toString()
+    {
+        return "[ "+getM11()+"      "+getM12()+"     "+getM13()+"     "+getM14()+ " ]\n[ "+getM21()+"      "+getM22()+"     "+getM23()+"     "+getM24()+ " ]\n[ "+getM31()+"      "+getM32()+"     "+getM33()+"     "+getM34()+" ]\n[ "+getM41()+"      "+getM42()+"     "+getM43()+"     "+getM44()+" ]";
+    }
 }
