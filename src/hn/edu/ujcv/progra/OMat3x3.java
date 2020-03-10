@@ -156,15 +156,23 @@ public class OMat3x3
                            r31, r32, r33);
     }
 
-    public OMat3x3 mult(OMat3x3 b)
+    public OMat3x3 multiplicacion(OMat3x3 b)
     {
         double r11, r12, r13;
         double r21, r22, r23;
         double r31, r32, r33;
-        r11   =  (this.m11 * b.m11) + (this.m12 * b.m21);
-        r12   =  (this.m11 * b.m12) + (this.m12 * b.m22);
-        //
-        return new OMat3x3();
+        r11   =  (this.m11 * b.m11) + (this.m12 * b.m21) + (this.m13 * b.m31);
+        r12   =  (this.m11 * b.m12) + (this.m12 * b.m22) + (this.m13 * b.m32);
+        r13   =  (this.m11 * b.m13) + (this.m12 * b.m23) + (this.m13 * b.m33);
+        r21   =  (this.m21 * b.m11) + (this.m22 * b.m21) + (this.m23 * b.m31);
+        r22   =  (this.m21 * b.m12) + (this.m22 * b.m22) + (this.m23 * b.m32);
+        r23   =  (this.m21 * b.m13) + (this.m22 * b.m23) + (this.m23 * b.m33);
+        r31   =  (this.m31 * b.m11) + (this.m32 * b.m21) + (this.m33 * b.m31);
+        r32   =  (this.m31 * b.m12) + (this.m32 * b.m22) + (this.m33 * b.m32);
+        r33   =  (this.m31 * b.m13) + (this.m32 * b.m23) + (this.m33 * b.m33);
+        return new OMat3x3(r11, r12, r13,
+                           r21, r22, r23,
+                           r31, r32, r33);
     }
 
     public double determinante()
@@ -195,16 +203,13 @@ public class OMat3x3
     }
 
     public static OMat3x3 identidad(){
-
-
-        //TODO: implementar
         return new OMat3x3();
     }
 
     @Override
     public String toString()
     {
-        return "[ "+getM11()+"      "+getM12()+"     "+getM13()+" ]\n[ "+getM21()+"      "+getM22()+"     "+getM23()+ " ]\n[ "+getM31()+"      "+getM32()+"     "+getM32()+" ]";
+        return "[ "+getM11()+"      "+getM12()+"     "+getM13()+" ]\n[ "+getM21()+"      "+getM22()+"     "+getM23()+ " ]\n[ "+getM31()+"      "+getM32()+"     "+getM33()+" ]";
     }
 
 
