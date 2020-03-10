@@ -235,9 +235,15 @@ public class OMat4x4 {
                            r41,r42,r43,r44);
     }
 
-    public double determinante(){
-        //TODO: implementar
-        return 0.0f;
+    public double determinante()
+    {
+        double respuesta;
+        OMat3x3 cofA = new OMat3x3(this.m22,this.m23,this.m24,this.m32,this.m33,this.m34,this.m42,this.m43,this.m44);
+        OMat3x3 cofB = new OMat3x3(this.m21,this.m23,this.m24,this.m31,this.m33,this.m34,this.m41,this.m43,this.m44);
+        OMat3x3 cofC = new OMat3x3(this.m21,this.m22,this.m24,this.m31,this.m32,this.m34,this.m41,this.m42,this.m44);
+        OMat3x3 cofD = new OMat3x3(this.m21,this.m22,this.m23,this.m31,this.m32,this.m33,this.m41,this.m42,this.m43);
+        respuesta = (this.m11 * cofA.determinante()) - (this.m12 * cofB.determinante()) + (this.m13 * cofC.determinante()) - (this.m14 * cofD.determinante());
+        return respuesta;
     }
 
     // Metodos de la clase.
@@ -264,11 +270,12 @@ public class OMat4x4 {
         return new OMat4x4();
     }
 
-    public static OMat4x4 identidad(){
-
-
-        //TODO: implementar
-        return new OMat4x4();
+    public static OMat4x4 identidad()
+    {
+        return new OMat4x4(1,0,0,0,
+                           0,1,0,0,
+                           0,0,1,0,
+                           0,0,0,1);
     }
 
     @Override
