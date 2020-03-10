@@ -27,6 +27,8 @@ public class OMat3x3
         this.m33 = m33;
     }
 
+    public  OMat3x3 (OMat3x3 a){}
+
     // accesoras y mutadoras
     public double getM11()
     {
