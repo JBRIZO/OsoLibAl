@@ -137,12 +137,9 @@ public class OMat2x2 {
 
 
     // v * M => vector
-
-    public OVecR2 mult(OVecR2 a){
-        //             x                        y
-        //  ( a.x * m11 + a.y * m21 , a.x * m12 + a.y * m22)
-        //
-        return new OVecR2();
+    public OVecR2 mult(OVecR2 a)
+    {
+        return new OVecR2(a.getX()*m11 + a.getY()*m21,a.getX()*m12 + a.getY()*m22);
     }
     @Override
     public String toString()
