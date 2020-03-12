@@ -55,7 +55,6 @@ public class OVecR2 {
         return respuesta;
     }
 
-
     public double magnitud()
     {
         double respuesta;

@@ -25,7 +25,7 @@ public class OMat2x2 {
 
     public OMat2x2(OMat2x2 a){}
 
-
+    //accesoras y mutadoras
     public double getM11()
     {
         return m11;
@@ -67,7 +67,7 @@ public class OMat2x2 {
     public OMat2x2 transpuesta()
     {
         return new OMat2x2(this.m22,this.m21,
-                this.m12,this.m11);
+                           this.m12,this.m11);
     }
 
     public OMat2x2 inversa()
@@ -106,7 +106,7 @@ public class OMat2x2 {
         r21 = (this.m21 * b.m11) + (this.m22 * b.m21);
         r22 = (this.m21 * b.m12) + (this.m22 * b.m22);
         return new OMat2x2(r11,r12,
-                r21,r22);
+                           r21,r22);
     }
 
     public double determinante()
