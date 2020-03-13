@@ -58,7 +58,6 @@ public class OMat2x2 {
     {
         this.m22 = m22;
     }
-    // metodos
 
 
 

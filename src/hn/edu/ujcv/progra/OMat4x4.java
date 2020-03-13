@@ -301,22 +301,39 @@ public class OMat4x4 {
     }
 
     // Metodos de la clase.
-    public static OMat4x4 rotX(double alpha){
-
-
-        return new OMat4x4();
+    public static OMat4x4 rotX(double alpha)
+    {
+        double  r11,r12;
+        double  r21,r22;
+        r11 = Math.cos(alpha);
+        r12 = Math.sin(alpha);
+        r21 = -Math.sin(alpha);
+        r22 = Math.cos(alpha);
+        return new OMat4x4(r11,r12,0,0,r21,r22,0,0,0,0,1,0,0,0,0,1);
     }
 
-    public static OMat4x4 rotY(double alpha){
+    public static OMat4x4 rotY(double alpha)
+    {
+        double r11,r13;
+        double r31,r33;
+        r11 = Math.cos(alpha);
+        r13 = -Math.sin(alpha);
+        r31 = Math.sin(alpha);
+        r33 = Math.cos(alpha);
 
-
-        return new OMat4x4();
+        return new OMat4x4(r11,0,r13,0,0,1,0,0,r31,0,r33,0,0,0,0,1);
     }
 
-    public static OMat4x4 rotZ(double alpha){
+    public static OMat4x4 rotZ(double alpha)
+    {
+        double r22,r23;
+        double r32,r33;
+        r22 = Math.cos(alpha);
+        r23 = Math.sin(alpha);
+        r32 = -Math.sin(alpha);
+        r33 = Math.cos(alpha);
 
-
-        return new OMat4x4();
+        return new OMat4x4(1,0,0,0,0,r22,r23,0,0,r32,r33,0,0,0,0,1);
     }
 
     public static OMat4x4 rotW(double alpha){
