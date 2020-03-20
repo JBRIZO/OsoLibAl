@@ -13,7 +13,8 @@ public class OVecR4 {
 
     public OVecR4(OVecR4 a) { }
 
-    public OVecR4(double x, double y, double z, double t) {
+    public OVecR4(double x, double y, double z, double t)
+    {
         this.x = x;
         this.y = y;
         this.z = z;

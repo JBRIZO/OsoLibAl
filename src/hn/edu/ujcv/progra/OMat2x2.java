@@ -10,8 +10,6 @@ public class OMat2x2 {
     // constructores
     public OMat2x2(OVecR2 a){}
 
-    public OMat2x2(OVecR2 a, OVecR2 b, boolean esColumna){}
-
     public OMat2x2(){}
 
     public OMat2x2(double m11, double m12,

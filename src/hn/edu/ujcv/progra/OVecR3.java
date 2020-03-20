@@ -41,15 +41,8 @@ public class OVecR3 {
         this.y = y;
     }
 
-    public double getZ()
-    {
-        return z;
-    }
-    public void setZ(double z)
-    {
-        this.z = z;
-    }
-
+    public double getZ() { return z; }
+    public void setZ(double z) { this.z = z; }
 
     //metodos
     public OVecR3 suma(OVecR3 b)

@@ -54,7 +54,6 @@ public class OVecR2 {
         respuesta = (this.x * b.x) + (this.y * b.y);
         return respuesta;
     }
-
     public double magnitud()
     {
         double respuesta;
