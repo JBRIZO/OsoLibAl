@@ -769,7 +769,7 @@ public class Main {
                             System.out.println("Ingrese el valor de A23");
                             int a23 = lector.obtenerEnteroValidado("Ingrese un numero valido");
                             System.out.println("Ingrese el valor de A24");
-                            int a24 = lector.obtenerEnteroValidado(" Ingrese un numero valido"):
+                            int a24 = lector.obtenerEnteroValidado(" Ingrese un numero valido");
                             System.out.println("Ingrese el valor de A31");
                             int a31 = lector.obtenerEnteroValidado("Ingrese un numero valido");
                             System.out.println("Ingrese el valor de A32");
