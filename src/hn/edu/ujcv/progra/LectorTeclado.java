@@ -38,17 +38,17 @@ public class LectorTeclado {
         return retval;
     }
 
-    public int obtenerEnteroValidado(String mensajeReintento)
+    public double obtenerEnteroValidado(String mensajeReintento)
     {
-        int retval = 0;
+        double retval = 0;
 
-        while (!m_SC.hasNextInt())
+        while (!m_SC.hasNextDouble())
         {
             m_SC.next();
             System.out.println(mensajeReintento);
         }
 
-        retval = m_SC.nextInt();
+        retval = m_SC.nextDouble();
         return retval;
     }
 
