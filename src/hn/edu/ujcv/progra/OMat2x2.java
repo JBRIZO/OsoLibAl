@@ -63,15 +63,20 @@ public class OMat2x2 {
 
     public OMat2x2 transpuesta()
     {
-        return new OMat2x2(this.m22,this.m21,
-                           this.m12,this.m11);
+        return new OMat2x2(this.m11,this.m21,
+                           this.m12,this.m22);
     }
 
     public OMat2x2 inversa()
     {
-        this.determinante();
+        if(this.determinante() != 0){
         return new OMat2x2((1/this.determinante()) * this.m22,(1/this.determinante()) * -this.m12,
                            (1/this.determinante()) * -this.m21,(1/this.determinante()) * this.m11);
+    }else
+        {
+            System.out.println("La inversa de la matriz no existe");
+            return new OMat2x2(0,0,0,0);
+        }
     }
     public OMat2x2 suma(OMat2x2 b){
         double r11, r12;

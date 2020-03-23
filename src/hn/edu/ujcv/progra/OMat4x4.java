@@ -200,6 +200,7 @@ public class OMat4x4 {
                            trans.m41/det,trans.m42/det,trans.m43/det,trans.m44/det);
         }else
             {
+                System.out.println("La inversa de la matriz no existe.");
                 return new OMat4x4(0,0,0,0,
                                    0,0,0,0,
                                    0,0,0,0,

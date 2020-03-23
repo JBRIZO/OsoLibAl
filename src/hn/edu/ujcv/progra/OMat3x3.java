@@ -120,6 +120,7 @@ public class OMat3x3
 
     public OMat3x3 inversa()
     {
+        if(this.determinante() != 0){
         double r11, r12, r13;
         double r21, r22, r23;
         double r31, r32, r33;
@@ -149,6 +150,11 @@ public class OMat3x3
         return new OMat3x3(r11/det,r12/det,r13/det,
                            r21/det,r22/det,r23/det,
                            r31/det,r32/det,r33/det);
+    }else
+        {
+            System.out.println("La inversa de la matriz no existe.");
+            return new OMat3x3(0,0,0,0,0,0,0,0,0);
+        }
     }
     public OMat3x3 suma(OMat3x3 b)
     {
@@ -237,7 +243,7 @@ public class OMat3x3
         r31 = -Math.sin(alpha);
         r33 = Math.cos(alpha);
 
-        return new OMat3x3();
+        return new OMat3x3(r11,0,r13,0,0,0,r31,0,r33);
     }
 
     public static OMat3x3 rotacionZ(double alpha)

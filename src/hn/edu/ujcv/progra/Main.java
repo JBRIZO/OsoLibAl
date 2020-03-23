@@ -137,7 +137,7 @@ public class Main {
                                             System.out.println("3. Producto Punto");
                                             System.out.println("4. Magnitud");
                                             System.out.println("5. Producto cruz");
-                                            System.out.println("6. Regresar al menú principal");
+                                            System.out.println("6. Regresar ");
                                             System.out.println("***********************************************************************************");
                                             System.out.println(" ");
                                             try {
@@ -255,7 +255,7 @@ public class Main {
                                             System.out.println("2. Resta de dos vectores");
                                             System.out.println("3. Producto Punto");
                                             System.out.println("4. Magnitud");
-                                            System.out.println("5. Regresar al menu principal");
+                                            System.out.println("5. Regresar ");
                                             System.out.println("***********************************************************************************");
                                             System.out.println(" ");
                                             try {
@@ -404,7 +404,7 @@ public class Main {
                                                 System.out.println("6. Determinante de la matriz");
                                                 System.out.println("7. Rotacion de la matriz");
                                                 System.out.println("8. Matriz Identidad");
-                                                System.out.println("9. Regresar al menu principal");
+                                                System.out.println("9. Regresar ");
                                                 System.out.println("***********************************************************************************");
                                                 System.out.println(" ");
                                                 try {
@@ -577,7 +577,7 @@ public class Main {
                                                 System.out.println("8. Rotacion de la matriz en Y");
                                                 System.out.println("9. Rotacion de la matriz en Z");
                                                 System.out.println("10. Matriz Identidad");
-                                                System.out.println("11. Volver al menu principal");
+                                                System.out.println("11. Regresar");
                                                 System.out.println("***********************************************************************************");
                                                 System.out.println(" ");
                                                 try {
@@ -885,7 +885,7 @@ public class Main {
 
                                         case 3:
                                             boolean salirF = false;
-                                            while(!salir) {
+                                            while(!salirF) {
                                                 System.out.println("                             Matriz de 4x4");
                                                 System.out.println("***********************************************************************************");
                                                 System.out.println("1. Suma de dos matrices");
@@ -898,7 +898,7 @@ public class Main {
                                                 System.out.println("8. Rotacion de la matriz en Y");
                                                 System.out.println("9. Rotacion de la matriz en Z");
                                                 System.out.println("10. Matriz Identidad");
-                                                System.out.println("11. Regresar al menu principal");
+                                                System.out.println("11. Regresar ");
                                                 System.out.println("***********************************************************************************");
                                                 System.out.println(" ");
                                                 try {
@@ -1360,7 +1360,7 @@ public class Main {
                                                         break;
 
                                                     case 11:
-                                                        salir3 = true;
+                                                        salirF = true;
                                                         break;
 
                                                     default:
